@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Proyectos</title>
+    <title>Portfolio - Projects</title>
     <link rel="shortcut icon" href="../../assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/fonts.css">
@@ -16,19 +16,18 @@
     <script src="../../assets/js/navigation.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
         <!-- Logo -->
         <div class="menu-logo">
-            <a href="../../en/">
-                <img src="../../assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
-            </a>
+            <a href="../../en/" aria-label="Gabriel Chávez Riera — Home"><span aria-hidden="true">G</span></a>
         </div>
         <!-- Hamburger icon -->
-        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu" hidden>
+        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu" data-close-label="Close menu" hidden>
             <span class="hamb-line" aria-hidden="true"></span>
         </button>
         <!-- Menu -->
-        <nav class="nav" id="primary-navigation">
+        <nav class="nav" id="primary-navigation" aria-label="Main">
             <ul class="menu">
                 <li><a href="../../en/#description">Description</a></li>
                 <li><a href="../../en/#skills">Skills</a></li>
@@ -36,12 +35,12 @@
             </ul>
 						<ul class="language-menu">
 							<li>Language:</li>
-							<li><a href="../../projects/">es</a></li>
-							<li><a href="../../en/projects/" class="active">en</a></li>
+							<li><a href="../../projects/" lang="es" hreflang="es" aria-label="Español">es</a></li>
+							<li><a href="../../en/projects/" class="active" lang="en" hreflang="en" aria-label="English" aria-current="true">en</a></li>
 						</ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
         <section id="projects">
             <div class="section-content">
                 <h1 class="section-title blue">Projects</h1>
@@ -55,7 +54,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://www.mapea.hn/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://www.mapea.hn/" target="_blank" aria-label="Visit the site: Mapea (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                     <div class="item">
@@ -67,7 +66,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Visit the site: Bórdalo Website (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                     <div class="item">
@@ -79,7 +78,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://amarsinorillas.com/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://amarsinorillas.com/" target="_blank" aria-label="Visit the site: Amar sin orillas (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                     <div class="item">
@@ -91,7 +90,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://ultrasonicahn.com/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://ultrasonicahn.com/" target="_blank" aria-label="Visit the site: Ultrasónica Website (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                     <div class="item">
@@ -103,7 +102,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://comprarbtc.labitcoinera.com/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://comprarbtc.labitcoinera.com/" target="_blank" aria-label="Visit the site: La Bitcoinera Webapp (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                     <div class="item">
@@ -115,7 +114,7 @@
                             </div>
                         </div>
                         <div class="item-actions">
-                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank">Visit the site</a>
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Visit the site: Bórdalo Webapp (opens in a new tab)">Visit the site</a>
                         </div>
                     </div>
                 </div>
@@ -123,14 +122,14 @@
         </section>
     </main>
     <footer>
-        <a href="https://github.com/gabo-cr" target="_blank" class="footer-link">
+        <a href="https://github.com/gabo-cr" target="_blank" class="footer-link" aria-label="GitHub (opens in a new tab)">
             <div class="wrapper">
-                <i class="fa-brands fa-github"></i>
+                <i aria-hidden="true" class="fa-brands fa-github"></i>
             </div>
         </a>
-        <a href="https://www.linkedin.com/in/gabriel-chavez-riera/" target="_blank" class="footer-link">
+        <a href="https://www.linkedin.com/in/gabriel-chavez-riera/" target="_blank" class="footer-link" aria-label="LinkedIn (opens in a new tab)">
             <div class="wrapper">
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
             </div>
         </a>
     </footer>

@@ -19,6 +19,7 @@ section#skills {
     border: 2px solid var(--white);
     border-radius: 20px;
     background-color: var(--secondary-color);
+    color: var(--white);
     animation: slideRight 4s;
 }
 .pt-90 { max-width: 90%; }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <script>
@@ -10,7 +10,7 @@
         document.head.append(base);
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Error 404</title>
+    <title>Portfolio - Error 500</title>
     <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/fonts.css">
@@ -22,19 +22,18 @@
     <script src="./assets/js/navigation.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content" data-current-document>Saltar al contenido principal</a>
     <header class="header">
         <!-- Logo -->
         <div class="menu-logo">
-            <a href="./">
-                <img src="./assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
-            </a>
+            <a href="./" aria-label="Gabriel Chávez Riera — Inicio"><span aria-hidden="true">G</span></a>
         </div>
         <!-- Hamburger icon -->
-        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menú" hidden>
+        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menú" data-close-label="Cerrar menú" hidden>
             <span class="hamb-line" aria-hidden="true"></span>
         </button>
         <!-- Menu -->
-        <nav class="nav" id="primary-navigation">
+        <nav class="nav" id="primary-navigation" aria-label="Principal">
             <ul class="menu">
                 <li><a href="./#description">Resumen</a></li>
                 <li><a href="./projects/">Proyectos</a></li>
@@ -42,23 +41,23 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="error">
-            <img src="./assets/images/black-cat.png" alt="Black cat">
+            <img src="./assets/images/black-cat.png" alt="Gato negro">
             <h1>500 ERROR</h1>
             <p>¡Oh, no! Ha ocurrido un fallo en la Matrix.</p>
             <a href="./" class="btn">Volver</a>
         </section>
     </main>
     <footer>
-        <a href="https://github.com/gabo-cr" target="_blank" class="footer-link">
+        <a href="https://github.com/gabo-cr" target="_blank" class="footer-link" aria-label="GitHub (se abre en una pestaña nueva)">
             <div class="wrapper">
-                <i class="fa-brands fa-github"></i>
+                <i aria-hidden="true" class="fa-brands fa-github"></i>
             </div>
         </a>
-        <a href="https://www.linkedin.com/in/gabriel-chavez-riera/" target="_blank" class="footer-link">
+        <a href="https://www.linkedin.com/in/gabriel-chavez-riera/" target="_blank" class="footer-link" aria-label="LinkedIn (se abre en una pestaña nueva)">
             <div class="wrapper">
-                <i class="fa-brands fa-linkedin-in"></i>
+                <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
             </div>
         </a>
     </footer>
