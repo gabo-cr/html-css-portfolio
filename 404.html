@@ -11,15 +11,17 @@
         document.head.append(base);
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Error 404</title>
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <title>Página no encontrada | Gabriel Chávez Riera</title>
+    <meta name="description" content="La página que buscas no existe. Vuelve al inicio del portfolio de Gabriel Chávez Riera para conocer sus habilidades y proyectos.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="preload" href="./assets/fonts/NunitoSans/nunito-sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Garamond/eb-garamond.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/error.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
-    <script src="https://kit.fontawesome.com/60c134a46a.js" crossorigin="anonymous"></script>
     <script src="./assets/js/navigation.js" defer></script>
 </head>
 <body>
@@ -44,7 +46,7 @@
     </header>
     <main id="main-content" tabindex="-1">
         <section class="error">
-            <img src="./assets/images/morpheus.png" alt="Morpheus">
+            <img src="./assets/images/morpheus.webp" width="240" height="240" alt="Morpheus" decoding="async">
             <h1>404 ERROR</h1>
             <p>Aún no estás listo para salir de la Matrix.</p>
             <a href="./" class="btn">Volver</a>
@@ -53,12 +55,12 @@
     <footer>
         <a href="https://github.com/gabo-cr" target="_blank" class="footer-link" aria-label="GitHub (se abre en una pestaña nueva)">
             <div class="wrapper">
-                <i aria-hidden="true" class="fa-brands fa-github"></i>
+                <img class="footer-icon" src="./assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async">
             </div>
         </a>
         <a href="https://www.linkedin.com/in/gabriel-chavez-riera/" target="_blank" class="footer-link" aria-label="LinkedIn (se abre en una pestaña nueva)">
             <div class="wrapper">
-                <i aria-hidden="true" class="fa-brands fa-linkedin-in"></i>
+                <img class="footer-icon" src="./assets/icons/linkedin.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async">
             </div>
         </a>
     </footer>

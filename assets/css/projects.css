@@ -16,15 +16,17 @@ section#projects {
 .item-image {
     height: 170px;
     width: 100%;
-    background-position: 50%;
-    background-size: cover;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
     border-bottom: 1px solid #dddddd;
 }
 .item-text {
     padding: 1rem;
 }
 .item-text .item-title {
-    font-family: 'Nunito sans';
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1rem;
     margin-bottom: 5px;
 }

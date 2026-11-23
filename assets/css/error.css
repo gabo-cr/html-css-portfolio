@@ -18,6 +18,7 @@ main {
 .error img {
     max-width: 120px;
     width: 100%;
+    height: auto;
     margin-bottom: 1rem;
 }
 .error h1 {

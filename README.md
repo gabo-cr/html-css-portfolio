@@ -1,34 +1,43 @@
-# Bootcamp Keepcoding
+# Portfolio de Gabriel Chávez Riera
 
-## Módulo: Introducción a HTML y CSS
+Portfolio personal desarrollado con HTML, CSS y JavaScript, a partir del proyecto del módulo de Introducción a HTML y CSS de KeepCoding. Presenta un resumen profesional, habilidades y proyectos, con diseño responsive y versiones en español e inglés.
 
-Este repositorio contiene la solución al proyecto propuesto en este módulo. La propuesta original consistía en crear un portfolio usando únicamente HTML y CSS, sin la ayuda de librerías o frameworks de interfaz. La versión actual añade JavaScript mínimo para la navegación móvil y para resolver la ruta base de las páginas de error.
+Estará disponible en [GitHub Pages](https://gabo-cr.github.io/html-css-portfolio/).
 
-Además, es un sitio web responsive, mobile-first.
+## Estructura
 
-### Contenido
+```text
+├── index.html              # Inicio en español
+├── projects/index.html     # Proyectos en español
+├── en/
+│   ├── index.html          # Inicio en inglés
+│   └── projects/index.html # Proyectos en inglés
+├── 404.html                # Página no encontrada
+├── 500.html                # Página de error del servidor
+├── assets/
+│   ├── css/                # Estilos
+│   ├── js/                 # Navegación
+│   ├── fonts/              # Fuentes y licencias
+│   ├── images/             # Imágenes del portfolio
+│   └── icons/              # Iconos SVG y licencia
+└── scripts/
+    └── optimize_assets.py  # Conversión de fuentes e imágenes
+```
 
-El portfolio consiste en 2 páginas, fácilmente navegables a través del menú: la página de inicio y la de proyectos.
+## Ejecutar localmente
 
-La página de inicio consiste en las siguientes secciones:
+No requiere instalación de dependencias ni compilación. Con Python 3, ejecutar desde la raíz del repositorio:
 
-- La descripción o resumen.
-- Un grid con mis habilidades.
-- Un banner.
-- Un formulario de contacto.
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
 
-En la página de proyectos se muestran los proyectos en un grid. Además, se muestra un video con autoplay en la parte superior de la página.
+Abrir [http://localhost:8000/](http://localhost:8000/). Para detener el servidor, pulsar `Ctrl+C`.
 
-También se añadieron las páginas de 404 y 500.
+También puede utilizarse la extensión Live Server de VS Code.
 
-### Cómo instalar y correr el proyecto
+## Licencias
 
-El proyecto está corriendo en [https://gabrielchavezriera.com/](https://gabrielchavezriera.com/), que a su vez fue desplegado a través de GitHub Pages.
-
-Para probarlo en el localhost, se puede clonar el repositorio y usar la extensión Live Server en VS Code.
-
-### Rutas y navegación
-
-Las páginas usan rutas relativas y pueden publicarse en la raíz de un dominio o en `/html-css-portfolio/`. En `404.html` y `500.html`, el script del `<head>` establece la ruta base para que los enlaces y recursos también funcionen desde una URL inexistente anidada. Si cambia el nombre del repositorio, actualizar `projectPath` en ambos archivos.
-
-El menú móvil permite navegación por teclado y se cierra al seleccionar un enlace, pulsar Escape o hacer clic fuera de la cabecera. Si JavaScript no está disponible, los enlaces de navegación permanecen visibles.
+- **Nunito Sans**: SIL Open Font License 1.1. [Ver licencia](assets/fonts/NunitoSans/OFL.txt).
+- **EB Garamond**: SIL Open Font License 1.1. [Ver licencia](assets/fonts/Garamond/OFL.txt).
+- **Bootstrap Icons**: licencia MIT. [Ver licencia](assets/icons/LICENSE).

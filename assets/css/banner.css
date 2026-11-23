@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../images/guayaquil-small.jpg');
+    background-image: url('../images/guayaquil-small.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -33,7 +33,7 @@
 
 @media (width > 768px) {
     #banner {
-        background-image: url('../images/guayaquil-big.jpg');
+        background-image: url('../images/guayaquil-big.webp');
     }
 }
 
