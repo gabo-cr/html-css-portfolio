@@ -4,38 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Proyectos</title>
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/projects.css">
-    <link rel="stylesheet" href="/assets/css/video.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
+    <link rel="stylesheet" href="../assets/css/video.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
     <script src="https://kit.fontawesome.com/60c134a46a.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/navigation.js" defer></script>
 </head>
 <body>
     <header class="header">
         <!-- Logo -->
         <div class="menu-logo">
-            <a href="/">
-                <img src="/assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
+            <a href="../">
+                <img src="../assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
             </a>
         </div>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menú" hidden>
+            <span class="hamb-line" aria-hidden="true"></span>
+        </button>
         <!-- Menu -->
-        <nav class="nav">
+        <nav class="nav" id="primary-navigation">
             <ul class="menu">
-                <li><a href="/#description">Resumen</a></li>
-                <li><a href="/#skills">Habilidades</a></li>
-                <li><a href="/projects">Proyectos</a></li>
+                <li><a href="../#description">Resumen</a></li>
+                <li><a href="../#skills">Habilidades</a></li>
+                <li><a href="../projects/">Proyectos</a></li>
             </ul>
             <ul class="language-menu">
                 <li>Idioma:</li>
-                <li><a href="/projects" class="active">es</a></li>
-                <li><a href="/en/projects">en</a></li>
+                <li><a href="../projects/" class="active">es</a></li>
+                <li><a href="../en/projects/">en</a></li>
             </ul>
         </nav>
     </header>
@@ -46,7 +48,7 @@
                 <div class="grid">
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/mapea-web.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/mapea-web.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">Mapea</h2>
                                 <p class="item-description">Dos webapps para uso interno de Mapea, desarrolladas con Next.js (React + TypeScript), una con App router y otra con Pages router.</p>
@@ -58,7 +60,7 @@
                     </div>
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/bordalo-web.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/bordalo-web.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">Bórdalo Website</h2>
                                 <p class="item-description">Website desarrollada utilizando el CMS WordPress.</p>
@@ -70,7 +72,7 @@
                     </div>
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/amarsinorillas.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/amarsinorillas.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">Amar sin orillas</h2>
                                 <p class="item-description">Website desarrollada utilizando el CMS WordPress.</p>
@@ -82,7 +84,7 @@
                     </div>
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/ultrasonica.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/ultrasonica.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">Ultrasónica Website</h2>
                                 <p class="item-description">Website desarrollada utilizando el CMS WordPress.</p>
@@ -94,7 +96,7 @@
                     </div>
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/labitcoinera.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/labitcoinera.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">La Bitcoinera Webapp</h2>
                                 <p class="item-description">Webapp para la venta de Bitcoin en línea, desarrollada utilizando el framework Django. También se usó HTML, CSS, JavaScript y Bootstrap.</p>
@@ -106,7 +108,7 @@
                     </div>
                     <div class="item">
                         <div class="item-content">
-                            <div class="item-image" style="background-image: url(/assets/images/projects/bordalo-ordenes.jpg);"></div>
+                            <div class="item-image" style="background-image: url(../assets/images/projects/bordalo-ordenes.jpg);"></div>
                             <div class="item-text">
                                 <h2 class="item-title">Bórdalo Webapp</h2>
                                 <p class="item-description">Webapp para el manejo de órdenes de trabajo y la presentación de reportes, desarrollada utilizando el framework Django. También se usó HTML, CSS, JavaScript y Bootstrap.</p>

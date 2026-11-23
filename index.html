@@ -4,40 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Gabriel Chávez Riera</title>
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/assets/css/fonts.css">
-    <link rel="stylesheet" href="/assets/css/base.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/description.css">
-    <link rel="stylesheet" href="/assets/css/skills.css">
-    <link rel="stylesheet" href="/assets/css/banner.css">
-    <link rel="stylesheet" href="/assets/css/contact.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/description.css">
+    <link rel="stylesheet" href="./assets/css/skills.css">
+    <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <script src="https://kit.fontawesome.com/60c134a46a.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/navigation.js" defer></script>
 </head>
 <body>
     <header class="header">
         <!-- Logo -->
         <div class="menu-logo">
-            <a href="/">
-                <img src="/assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
+            <a href="./">
+                <img src="./assets/images/logo.png" alt="Logo de Gabriel Chávez Riera" id="logo">
             </a>
         </div>
         <!-- Hamburger icon -->
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <button class="hamb" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Abrir menú" hidden>
+            <span class="hamb-line" aria-hidden="true"></span>
+        </button>
         <!-- Menu -->
-        <nav class="nav">
+        <nav class="nav" id="primary-navigation">
             <ul class="menu">
-                <li><a href="/#description">Resumen</a></li>
-                <li><a href="/#skills">Habilidades</a></li>
-                <li><a href="/projects">Proyectos</a></li>
+                <li><a href="./#description">Resumen</a></li>
+                <li><a href="./#skills">Habilidades</a></li>
+                <li><a href="./projects/">Proyectos</a></li>
             </ul>
             <ul class="language-menu">
                 <li>Idioma:</li>
-                <li><a href="/" class="active">es</a></li>
-                <li><a href="/en">en</a></li>
+                <li><a href="./" class="active">es</a></li>
+                <li><a href="./en/">en</a></li>
             </ul>
         </nav>
     </header>
