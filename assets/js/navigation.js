@@ -65,26 +65,80 @@ if (document.body.classList.contains('home-page') && document.getElementById('pr
     const links = [...navigation.querySelectorAll('.menu a')];
     const languages = [...navigation.querySelectorAll('.language-menu a')];
 
+    const sections = links.map(link => document.getElementById(link.hash.slice(1)));
+    let activeSection = null;
+    let anchorTarget = null;
+    let frame = null;
+    let settleTimer;
+
+    const setActive = id => {
+        if (id === activeSection) return;
+        activeSection = id;
+        for (const link of links) {
+            if (link.hash === `#${id}`) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        }
+        for (const link of languages) link.hash = `#${id}`;
+    };
+
+    const updateVisibleSection = () => {
+        frame = null;
+        if (anchorTarget) return;
+        const headerBottom = header.getBoundingClientRect().bottom;
+        const readingLine = headerBottom + Math.min(120, (innerHeight - headerBottom) / 4);
+        let current = sections[0].id;
+        for (const section of sections) {
+            if (section.getBoundingClientRect().top <= readingLine) current = section.id;
+        }
+        const contact = sections[sections.length - 1].getBoundingClientRect();
+        // The final section may never reach the reading line on a tall screen.
+        if (contact.top <= innerHeight - Math.min(contact.height / 2, 96)) current = 'contact';
+        setActive(current);
+    };
+
+    const queueUpdate = () => {
+        if (frame === null) frame = requestAnimationFrame(updateVisibleSection);
+    };
+    const releaseAnchor = () => {
+        clearTimeout(settleTimer);
+        anchorTarget = null;
+        queueUpdate();
+    };
+    const waitForScroll = () => {
+        clearTimeout(settleTimer);
+        settleTimer = setTimeout(releaseAnchor, 180);
+    };
+    const updateHashLinks = () => {
+        let target;
+        try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); }
+        catch { target = null; }
+        const id = target?.closest('section[id], footer[id]')?.id;
+        if (sections.some(section => section.id === id)) {
+            anchorTarget = id;
+            setActive(id);
+            waitForScroll();
+        } else releaseAnchor();
+    };
     const updateAnchorOffset = () => {
         const height = Math.ceil(header.getBoundingClientRect().height);
         document.documentElement.style.setProperty('--anchor-offset', `${height + 16}px`);
-    };
-
-    const updateHashLinks = () => {
-        const id = location.hash.slice(1);
-        const target = id ? document.getElementById(id) : null;
-        const section = target?.closest('section[id], footer[id]')?.id || 'description';
-        for (const link of links) {
-            if (link.hash === `#${section}`) link.setAttribute('aria-current', 'location');
-            else link.removeAttribute('aria-current');
-        }
-        for (const link of languages) link.hash = target ? location.hash : '';
+        queueUpdate();
     };
 
     header.dataset.enhanced = '';
     updateAnchorOffset();
     updateHashLinks();
     window.addEventListener('hashchange', updateHashLinks);
+    window.addEventListener('scroll', () => {
+        if (anchorTarget) waitForScroll();
+        queueUpdate();
+    }, { passive: true });
+    // Explicit manual input cancels a pending smooth-anchor scroll selection.
+    window.addEventListener('wheel', releaseAnchor, { passive: true });
+    window.addEventListener('touchstart', releaseAnchor, { passive: true });
+    window.addEventListener('keydown', event => {
+        if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(event.key)) releaseAnchor();
+    });
     window.addEventListener('resize', updateAnchorOffset);
     if ('ResizeObserver' in window) new ResizeObserver(updateAnchorOffset).observe(header);
 }
