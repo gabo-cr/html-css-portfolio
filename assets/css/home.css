@@ -1,0 +1,142 @@
+/* Editorial home styles are isolated from projects, skills and error pages. */
+.home-page .header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    padding-block: var(--space-2);
+    padding-inline: max(var(--page-gutter), calc((100% - var(--layout-width)) / 2));
+    background-color: var(--color-ink);
+    border-bottom: 1px solid rgb(255 255 255 / 12%);
+    box-shadow: none;
+}
+.home-page .menu-logo {
+    flex: none;
+}
+.home-page .menu-logo a {
+    justify-content: flex-start;
+    font-size: 2.5rem;
+}
+.home-page .hamb {
+    margin-left: auto;
+    padding: var(--space-6) var(--space-3);
+}
+.home-page .nav {
+    flex-basis: 100%;
+    background-color: var(--color-ink);
+}
+.home-page .nav[data-collapsible] {
+    left: 0;
+    padding: var(--space-4) var(--page-gutter) var(--space-6);
+    border-bottom: 1px solid var(--color-rule);
+}
+.home-page .menu a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: var(--space-3) 0;
+    color: var(--color-header-text);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-underline-offset: 0.45em;
+    text-decoration-thickness: 2px;
+}
+.home-page .menu a[aria-current="page"] {
+    color: var(--white);
+    text-decoration: underline;
+    text-decoration-color: var(--color-header-accent);
+}
+.home-page .language-menu {
+    gap: var(--space-1);
+    padding: var(--space-6) 0 0;
+}
+.home-page .language-menu li:first-child {
+    color: var(--color-header-text);
+    font-size: 0.8rem;
+}
+.home-page .language-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-2);
+    border-radius: var(--radius-control);
+    font-size: 0.8rem;
+    line-height: 1;
+}
+.home-page .language-menu li a.active {
+    color: var(--color-ink);
+}
+.home-page .header a:focus-visible,
+.home-page .hamb:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+    box-shadow: none;
+}
+.home-page .header a:focus-visible {
+    outline-offset: -2px;
+}
+.home-page .language-menu li a.active:focus-visible {
+    outline-color: var(--main-color);
+}
+.intro {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    border-bottom: 1px solid var(--color-rule);
+}
+.intro-inner {
+    display: grid;
+    gap: var(--space-4);
+    width: min(var(--layout-width), calc(100% - 2 * var(--page-gutter)));
+    margin-inline: auto;
+    padding-block: clamp(var(--space-8), 4vw, 3.5rem);
+}
+@media (width > 768px) {
+    .home-page .header {
+        min-height: 80px;
+        flex-wrap: nowrap;
+    }
+    .home-page .nav,
+    .home-page .nav[data-collapsible],
+    .home-page .nav[data-collapsible].is-open {
+        flex-basis: auto;
+        gap: var(--space-8);
+        padding: 0;
+        border: 0;
+    }
+    .home-page .menu {
+        gap: var(--space-6);
+    }
+    .home-page .language-menu {
+        padding: 0;
+        border: 0;
+        border-left: 1px solid rgb(255 255 255 / 24%);
+        border-radius: 0;
+        padding-left: var(--space-6);
+    }
+    .home-page .language-menu li:nth-child(2) a,
+    .home-page .language-menu li:nth-child(3) a {
+        padding: var(--space-2);
+        border-radius: var(--radius-control);
+    }
+}
+@media (width >= 960px) {
+    .intro-inner {
+        grid-template-columns: minmax(0, 36rem) minmax(0, 18rem);
+        align-items: center;
+        column-gap: clamp(var(--space-6), 3vw, var(--space-12));
+    }
+}
+@media (hover: hover) {
+    .home-page .menu a:hover {
+        color: var(--white);
+        background: none;
+        text-decoration: underline;
+        text-decoration-color: var(--color-header-accent);
+    }
+    .home-page .language-menu a:not(.active):hover {
+        background-color: rgb(255 255 255 / 10%);
+    }
+}
