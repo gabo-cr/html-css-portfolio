@@ -1,5 +1,6 @@
 /* Editorial home styles are isolated from projects, skills and error pages. */
 .home-page .header {
+    position: static;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -42,7 +43,7 @@
     text-underline-offset: 0.45em;
     text-decoration-thickness: 2px;
 }
-.home-page .menu a[aria-current="page"] {
+.home-page .menu a[aria-current="location"] {
     color: var(--white);
     text-decoration: underline;
     text-decoration-color: var(--color-header-accent);
@@ -139,4 +140,21 @@
     .home-page .language-menu a:not(.active):hover {
         background-color: rgb(255 255 255 / 10%);
     }
+}
+
+/* Native anchors remain usable when the uncollapsed menu has no JavaScript. */
+.home-page .header[data-enhanced] {
+    position: sticky;
+}
+.home-page :is(main, section[id], footer[id], article[id]) {
+    scroll-margin-top: var(--anchor-offset, 1rem);
+}
+.home-page #contact {
+    flex-wrap: wrap;
+}
+.home-page .contact-title {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.2;
 }

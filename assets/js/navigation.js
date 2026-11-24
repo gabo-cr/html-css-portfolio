@@ -58,3 +58,33 @@ if (toggle && navigation) {
     navigation.dataset.collapsible = '';
     toggle.hidden = false;
 }
+
+// The single-page documents use native anchors; no content routing is needed.
+if (document.body.classList.contains('home-page') && document.getElementById('projects')) {
+    const header = document.querySelector('.header');
+    const links = [...navigation.querySelectorAll('.menu a')];
+    const languages = [...navigation.querySelectorAll('.language-menu a')];
+
+    const updateAnchorOffset = () => {
+        const height = Math.ceil(header.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--anchor-offset', `${height + 16}px`);
+    };
+
+    const updateHashLinks = () => {
+        const id = location.hash.slice(1);
+        const target = id ? document.getElementById(id) : null;
+        const section = target?.closest('section[id], footer[id]')?.id || 'description';
+        for (const link of links) {
+            if (link.hash === `#${section}`) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        }
+        for (const link of languages) link.hash = target ? location.hash : '';
+    };
+
+    header.dataset.enhanced = '';
+    updateAnchorOffset();
+    updateHashLinks();
+    window.addEventListener('hashchange', updateHashLinks);
+    window.addEventListener('resize', updateAnchorOffset);
+    if ('ResizeObserver' in window) new ResizeObserver(updateAnchorOffset).observe(header);
+}

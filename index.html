@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./assets/css/description.css">
     <link rel="stylesheet" href="./assets/css/skills.css">
     <link rel="stylesheet" href="./assets/css/banner.css">
+    <link rel="stylesheet" href="./assets/css/projects.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <script src="./assets/js/navigation.js" defer></script>
@@ -50,9 +51,10 @@
         <!-- Menu -->
         <nav class="nav" id="primary-navigation" aria-label="Principal">
             <ul class="menu">
-                <li><a href="./#description" aria-current="page">Resumen</a></li>
-                <li><a href="./#skills">Habilidades</a></li>
-                <li><a href="./projects/">Proyectos</a></li>
+                <li><a href="#description">Inicio</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
             </ul>
             <ul class="language-menu">
                 <li>Idioma:</li>
@@ -64,7 +66,7 @@
     <main id="main-content" tabindex="-1">
         <div class="intro">
             <div class="intro-inner">
-                <section id="description" aria-labelledby="intro-title">
+                <section id="description" aria-labelledby="intro-title" tabindex="-1">
                     <h1 class="section-title" id="intro-title">Gabriel <span>Chávez Riera</span></h1>
                     <p class="section-subtitle accent" lang="en">Full-Stack Web Developer</p>
                     <div class="intro-copy">
@@ -72,7 +74,7 @@
                         <p>Abierto a nuevas oportunidades profesionales.</p>
                     </div>
                     <div class="intro-actions">
-                        <a class="intro-cta" href="./projects/">
+                        <a class="intro-cta" href="#projects">
                             Ver proyectos
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,9 +91,9 @@
                 </figure>
             </div>
         </div>
-        <section id="skills">
+        <section id="skills" aria-labelledby="skills-title" tabindex="-1">
             <div class="section-content">
-                <h2 class="section-title blue">Habilidades</h2>
+                <h2 class="section-title blue" id="skills-title">Habilidades</h2>
                 <div class="skills-content">
                     <div class="skill">
                         <div class="skill-name" id="skill-1">React (Next.js)</div>
@@ -178,8 +180,88 @@
                 </div>
             </div>
         </section>
+        <section id="projects" aria-labelledby="projects-title" tabindex="-1">
+            <div class="section-content">
+                <h2 class="section-title blue" id="projects-title">Proyectos</h2>
+                <div class="grid">
+                    <article class="item" id="project-mapea" aria-labelledby="project-mapea-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/mapea-web.webp" width="1065" height="631" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-mapea-title">Mapea</h3>
+                                <p class="item-description">Dos aplicaciones web para uso interno de Mapea, desarrolladas con Next.js (React + TypeScript), una con App router y otra con Pages router.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://www.mapea.hn/" target="_blank" aria-label="Ver el sitio: Mapea (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-bordalo-web" aria-labelledby="project-bordalo-web-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/bordalo-web.webp" width="670" height="432" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-bordalo-web-title">Sitio web de Bórdalo</h3>
+                                <p class="item-description">Sitio web desarrollado con el CMS WordPress.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Ver el sitio: Sitio web de Bórdalo (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-amar-sin-orillas" aria-labelledby="project-amar-sin-orillas-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/amarsinorillas.webp" width="669" height="370" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-amar-sin-orillas-title">Amar sin orillas</h3>
+                                <p class="item-description">Sitio web desarrollado con el CMS WordPress.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://amarsinorillas.com/" target="_blank" aria-label="Ver el sitio: Amar sin orillas (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-ultrasonica" aria-labelledby="project-ultrasonica-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/ultrasonica.webp" width="670" height="420" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-ultrasonica-title">Sitio web de Ultrasónica</h3>
+                                <p class="item-description">Sitio web desarrollado con el CMS WordPress.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://ultrasonicahn.com/" target="_blank" aria-label="Ver el sitio: Sitio web de Ultrasónica (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-la-bitcoinera" aria-labelledby="project-la-bitcoinera-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/labitcoinera.webp" width="670" height="427" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-la-bitcoinera-title">Aplicación web de La Bitcoinera</h3>
+                                <p class="item-description">Aplicación web para la venta de Bitcoin en línea, desarrollada con Django. También se usó HTML, CSS, JavaScript y Bootstrap.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://comprarbtc.labitcoinera.com/" target="_blank" aria-label="Ver el sitio: Aplicación web de La Bitcoinera (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-bordalo-app" aria-labelledby="project-bordalo-app-title">
+                        <div class="item-content">
+                            <img class="item-image" src="./assets/images/projects/bordalo-ordenes.webp" width="668" height="409" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-bordalo-app-title">Aplicación web de Bórdalo</h3>
+                                <p class="item-description">Aplicación web para el manejo de órdenes de trabajo y la presentación de reportes, desarrollada con Django. También se usó HTML, CSS, JavaScript y Bootstrap.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Ver el sitio: Aplicación web de Bórdalo (se abre en una pestaña nueva)">Ver el sitio</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer id="contact" aria-labelledby="contact-title" tabindex="-1">
+        <h2 class="contact-title" id="contact-title">Contacto</h2>
         <a href="https://github.com/gabo-cr" target="_blank" class="footer-link" aria-label="GitHub (se abre en una pestaña nueva)">
             <div class="wrapper">
                 <img class="footer-icon" src="./assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async">

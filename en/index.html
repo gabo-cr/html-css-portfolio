@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../assets/css/description.css">
     <link rel="stylesheet" href="../assets/css/skills.css">
     <link rel="stylesheet" href="../assets/css/banner.css">
+    <link rel="stylesheet" href="../assets/css/projects.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/home.css">
     <script src="../assets/js/navigation.js" defer></script>
@@ -50,9 +51,10 @@
         <!-- Menu -->
         <nav class="nav" id="primary-navigation" aria-label="Main">
             <ul class="menu">
-								<li><a href="../en/#description" aria-current="page">Description</a></li>
-								<li><a href="../en/#skills">Skills</a></li>
-								<li><a href="../en/projects/">Projects</a></li>
+                <li><a href="#description">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <ul class="language-menu">
 								<li>Language:</li>
@@ -64,7 +66,7 @@
     <main id="main-content" tabindex="-1">
         <div class="intro">
             <div class="intro-inner">
-                <section id="description" aria-labelledby="intro-title">
+                <section id="description" aria-labelledby="intro-title" tabindex="-1">
                     <h1 class="section-title" id="intro-title">Gabriel <span>Chávez Riera</span></h1>
                     <p class="section-subtitle accent">Full-Stack Web Developer</p>
                     <div class="intro-copy">
@@ -72,7 +74,7 @@
                         <p>Open to new professional opportunities.</p>
                     </div>
                     <div class="intro-actions">
-                        <a class="intro-cta" href="../en/projects/">
+                        <a class="intro-cta" href="#projects">
                             View projects
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                                 <path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,9 +91,9 @@
                 </figure>
             </div>
         </div>
-        <section id="skills">
+        <section id="skills" aria-labelledby="skills-title" tabindex="-1">
             <div class="section-content">
-                <h2 class="section-title blue">Skills</h2>
+                <h2 class="section-title blue" id="skills-title">Skills</h2>
                 <div class="skills-content">
                     <div class="skill">
                         <div class="skill-name" id="skill-1">React (Next.js)</div>
@@ -178,8 +180,88 @@
                 </div>
             </div>
         </section>
+        <section id="projects" aria-labelledby="projects-title" tabindex="-1">
+            <div class="section-content">
+                <h2 class="section-title blue" id="projects-title">Projects</h2>
+                <div class="grid">
+                    <article class="item" id="project-mapea" aria-labelledby="project-mapea-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/mapea-web.webp" width="1065" height="631" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-mapea-title">Mapea</h3>
+                                <p class="item-description">Two webapps developed for Mapea using Next.js (React + TypeScript), one with App router and the other with Pages router.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://www.mapea.hn/" target="_blank" aria-label="Visit the site: Mapea (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-bordalo-web" aria-labelledby="project-bordalo-web-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/bordalo-web.webp" width="670" height="432" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-bordalo-web-title">Bórdalo Website</h3>
+                                <p class="item-description">Website developed for Bórdalo using WordPress CMS.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Visit the site: Bórdalo Website (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-amar-sin-orillas" aria-labelledby="project-amar-sin-orillas-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/amarsinorillas.webp" width="669" height="370" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-amar-sin-orillas-title">Amar sin orillas</h3>
+                                <p class="item-description">Website developed for the educational project Amar sin orillas, using WordPress CMS.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://amarsinorillas.com/" target="_blank" aria-label="Visit the site: Amar sin orillas (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-ultrasonica" aria-labelledby="project-ultrasonica-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/ultrasonica.webp" width="670" height="420" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-ultrasonica-title">Ultrasónica Website</h3>
+                                <p class="item-description">Website developed for Ultrasónica using WordPress CMS with LearnPress.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://ultrasonicahn.com/" target="_blank" aria-label="Visit the site: Ultrasónica Website (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-la-bitcoinera" aria-labelledby="project-la-bitcoinera-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/labitcoinera.webp" width="670" height="427" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-la-bitcoinera-title">La Bitcoinera Webapp</h3>
+                                <p class="item-description">Webapp to sell Bitcoin online, developed for La Bitcoinera using Django.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://comprarbtc.labitcoinera.com/" target="_blank" aria-label="Visit the site: La Bitcoinera Webapp (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                    <article class="item" id="project-bordalo-app" aria-labelledby="project-bordalo-app-title">
+                        <div class="item-content">
+                            <img class="item-image" src="../assets/images/projects/bordalo-ordenes.webp" width="668" height="409" alt="" loading="lazy" decoding="async">
+                            <div class="item-text">
+                                <h3 class="item-title" id="project-bordalo-app-title">Bórdalo Webapp</h3>
+                                <p class="item-description">Webapp developed for Bordalo to handle work orders and reporting. The webapp was developed using Django.</p>
+                            </div>
+                        </div>
+                        <div class="item-actions">
+                            <a class="item-link btn btn-secondary" href="https://bordaloecuador.com/" target="_blank" aria-label="Visit the site: Bórdalo Webapp (opens in a new tab)">Visit the site</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
+    <footer id="contact" aria-labelledby="contact-title" tabindex="-1">
+        <h2 class="contact-title" id="contact-title">Contact</h2>
         <a href="https://github.com/gabo-cr" target="_blank" class="footer-link" aria-label="GitHub (opens in a new tab)">
             <div class="wrapper">
                 <img class="footer-icon" src="../assets/icons/github.svg" width="20" height="20" alt="" aria-hidden="true" loading="lazy" decoding="async">
