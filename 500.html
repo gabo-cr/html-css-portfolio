@@ -2,13 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <script>
-        const projectPath = '/html-css-portfolio';
-        const base = document.createElement('base');
-        base.href = location.pathname === projectPath || location.pathname.startsWith(projectPath + '/')
-            ? projectPath + '/' : '/';
-        document.head.append(base);
-    </script>
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error del servidor | Gabriel Chávez Riera</title>
     <meta name="description" content="Ha ocurrido un error del servidor. Vuelve al inicio del portfolio de Gabriel Chávez Riera.">
@@ -24,7 +18,7 @@
     <script src="./assets/js/navigation.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main-content" data-current-document>Saltar al contenido principal</a>
+    <a class="skip-link" href="./500.html#main-content" data-current-document>Saltar al contenido principal</a>
     <header class="header">
         <!-- Logo -->
         <div class="menu-logo">
@@ -38,7 +32,7 @@
         <nav class="nav" id="primary-navigation" aria-label="Principal">
             <ul class="menu">
                 <li><a href="./#description">Resumen</a></li>
-                <li><a href="./projects/">Proyectos</a></li>
+                <li><a href="./#projects">Proyectos</a></li>
                 <li><a href="./#skills">Habilidades</a></li>
             </ul>
         </nav>

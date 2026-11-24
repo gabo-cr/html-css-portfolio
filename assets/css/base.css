@@ -6,7 +6,6 @@
     --black: #000;
     --white: #FFF;
     --gray: #4B5358;
-    --soft-gray: #9d9d9d;
 
     /* Editorial system; applied incrementally to the home page. */
     --color-paper: #F6F8F8;
@@ -23,7 +22,6 @@
     --space-8: 2rem;
     --space-12: 3rem;
     --space-16: 4rem;
-    --space-24: 6rem;
     --layout-width: 1160px;
     --page-gutter: clamp(1.125rem, 4vw, 2rem);
     --radius-control: 0.25rem;
@@ -73,13 +71,6 @@ section {
 .accent {
     color: var(--secondary-color);
 }
-.blue {
-    color: var(--main-color);
-}
-.bg-dark {
-    background-color: var(--tertiary-color);
-    color: var(--white);
-}
 .btn {
     display: block;
     width: auto;
@@ -91,10 +82,6 @@ section {
     padding: 7px 14px;
     cursor: pointer;
     transition: background-color 0.2s ease-in, border 0.2s ease-in;
-}
-.btn.btn-secondary {
-    background-color: var(--white);
-    color: var(--main-color);
 }
 
 @media (hover :hover) {
